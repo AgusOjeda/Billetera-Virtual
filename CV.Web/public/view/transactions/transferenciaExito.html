@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GStick</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+</head>
+
+<body class="h-full font-GilroyRegular bg-bgPrimary">
+    <div class="grid cnt h-full">
+        <nav class="grid grid-cols-2 py-4 h-auto content-end">
+            <p class="text-gray-500 text-3xl text-center font-bold mr-auto ml-auto">Transferencia de dinero</p>
+            <h1 class="font-bold text-5xl text-secondary text-right mr-10 ml-auto">G-man</h1>
+        </nav>
+        <main class="grid grid-rows-1 text-center place-items-center">
+            <div class="bg-white shadow-sm rounded-2xl mt-2 w-6/12 place-content-center">
+                <div class="space-y-8 p-8">
+                    <image title="trx-exitosa" class="mr-auto ml-auto" src="../../img/exito.jpg"></image>
+                    <h3 class="text-3xl text-center font-bold">Transferencia exitosa !</h3>
+                    <button
+                        class="place-items-center mb-100 w-80 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-base rounded-xl px-5 py-2"
+                        type="button">Continuar</button>
+                </div>
+            </div>
+        </main>
+        <footer class="h-12 self-end">
+        </footer>
+    </div>
+</body>
+
+<style>
+    .hr-connect {
+        height: 270px;
+        width: 2px;
+        border-width: 1px dashed;
+        color: #000;
+        background-color: #000;
+    }
+
+    .cnt {
+        grid-template-rows: minmax(10%, auto) 1fr minmax(20px, 60px);
+    }
+
+    main {
+        background-color: #EFF1FA;
+    }
+
+    footer {
+        background-color: #1A2030;
+    }
+
+    .bg-card {
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .color-azul {
+        color: #1D5BFB;
+    }
+
+    #cont {
+        margin: auto;
+    }
+</style>
+
+</html>

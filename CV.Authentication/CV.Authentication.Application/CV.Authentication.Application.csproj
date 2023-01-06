@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Mapper\**" />
+    <EmbeddedResource Remove="Mapper\**" />
+    <None Remove="Mapper\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CV.Authentication.AccessData\CV.Authentication.AccessData.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="108.0.2" />
+  </ItemGroup>
+
+</Project>

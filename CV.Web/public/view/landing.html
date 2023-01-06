@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GStick</title>
+  <link href="../css/styles.css" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body class="font-GilroyRegular bg-bgPrimary container">
+  <header class="bg-bgPrimary">
+    <nav class="container flex items-center justify-between place-items-center p-3">
+      <h1 class="text-4xl text-secondary font-GilroyExtraBold font-extrabold">
+        GStick
+      </h1>
+      <div class="place-content-center text-center justify-center">
+        <a class="text-textColor text-base mr-2 hover:text-secondary transition-colors"
+          href="../view/login.html">Iniciar sesión</a>
+        <a id="btnSignUp" href="../view/register.html"
+          class="bg-secondary font-semibold rounded-md text-white px-7 py-3 hover:bg-secondaryHover cursor-pointer shadow-md transition-colors">
+          Registrarse
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="mt-32 text-center">
+    <section id="hero">
+      <div class="container flex flex-col text-center justify-center items-center">
+        <h1 class="text-7xl font-extrabold font-GilroyBlack text-textColor">
+          La billetera digital
+        </h1>
+        <h1 class="text-7xl font-extrabold text-secondary">
+          ¡más transparente de la historia!
+        </h1>
+        <div class="w-[600px] h-[50px] mt-4">
+          <p class="text-center text-2xl break-words break-normal">
+            Cree un usuario y opere al instante.
+          </p>
+        </div>
+        <div class="mt-8">
+          <a href="../view/register.html"
+            class="bg-secondary font-semibold rounded-md text-white px-7 py-3 hover:bg-secondaryHover hover:ring cursor-pointer shadow-md mr-2 transition-colors">
+            Empezar
+          </a>
+        </div>
+
+        <div class="mt-32 relative">
+          <img class="w-[890px] h-[579px] top-0 left-0" src="../images/HeroImg.png" alt="hero" />
+          <img class="absolute -top-40 -right-28" src="../images/HeroTransferIncoming.png" alt="hero" />
+        </div>
+      </div>
+    </section>
+    <section id="features" class="container mt-36 flex flex-col text-center justify-center items-center">
+      <h1 class="text-[64px] font-extrabold font-GilroyExtraBold text-textColor">
+        Caracteristicas
+      </h1>
+      <div class="grid grid-cols-2 grid-rows-2 mt-6 content-center">
+        <div class="text-2xl w-[367px] h-[212px] mr-[97.5px]">
+          <svg class="m-auto" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M22.9678 34.6996C22.9678 36.5665 24.4511 38.357 27.0914 39.6772C29.7316 40.9973 33.3126 41.739 37.0466 41.739C40.7805 41.739 44.3615 40.9973 47.0018 39.6772C49.6421 38.357 51.1254 36.5665 51.1254 34.6996C51.1254 32.8326 49.6421 31.0421 47.0018 29.7219C44.3615 28.4018 40.7805 27.6602 37.0466 27.6602C33.3126 27.6602 29.7316 28.4018 27.0914 29.7219C24.4511 31.0421 22.9678 32.8326 22.9678 34.6996Z"
+              stroke="#1A2030" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M22.9678 34.7002V44.0861C22.9678 47.9718 29.2704 51.1255 37.0466 51.1255C44.8228 51.1255 51.1254 47.9718 51.1254 44.0861V34.7002"
+              stroke="#1A2030" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M8.88867 15.9281C8.88867 16.8525 9.25283 17.7679 9.96036 18.6219C10.6679 19.476 11.7049 20.252 13.0123 20.9057C14.3196 21.5593 15.8716 22.0779 17.5797 22.4316C19.2879 22.7854 21.1186 22.9675 22.9675 22.9675C24.8163 22.9675 26.6471 22.7854 28.3552 22.4316C30.0633 22.0779 31.6154 21.5593 32.9227 20.9057C34.23 20.252 35.2671 19.476 35.9746 18.6219C36.6821 17.7679 37.0463 16.8525 37.0463 15.9281C37.0463 15.0036 36.6821 14.0883 35.9746 13.2342C35.2671 12.3802 34.23 11.6041 32.9227 10.9505C31.6154 10.2968 30.0633 9.77828 28.3552 9.42451C26.6471 9.07075 24.8163 8.88867 22.9675 8.88867C21.1186 8.88867 19.2879 9.07075 17.5797 9.42451C15.8716 9.77828 14.3196 10.2968 13.0123 10.9505C11.7049 11.6041 10.6679 12.3802 9.96036 13.2342C9.25283 14.0883 8.88867 15.0036 8.88867 15.9281Z"
+              stroke="#1A2030" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8.88867 15.9282V39.3929C8.88867 41.4766 10.7001 43.349 13.5816 44.6396" stroke="#1A2030"
+              stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8.88867 27.6602C8.88867 29.7438 10.7001 31.6163 13.5816 32.9069" stroke="#1A2030" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <h3 class="text-2xl mt-5">Soporte de multiples monedas</h3>
+          <p class="text-center break-words break-normal text-base mt-5">
+            Opere con las diferentes monedas del mercado.
+          </p>
+        </div>
+        <div class="text-2xl w-[367px] h-[212px] ml-[97.5px]">
+          <svg class="m-auto" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.033 51.579C30.2455 51.8801 29.3746 51.8801 28.5871 51.579C22.4601 49.2125 17.193 45.0468 13.4786 39.6298C9.7643 34.2128 7.77671 27.7984 7.77734 21.2303V12.6696C7.77734 11.3722 8.29273 10.128 9.21012 9.21061C10.1275 8.29322 11.3718 7.77783 12.6691 7.77783H46.9117C48.2091 7.77783 49.4534 8.29322 50.3708 9.21061C51.2881 10.128 51.8035 11.3722 51.8035 12.6696V21.3085C51.8036 27.8615 49.8192 34.2609 46.1117 39.6642C42.4041 45.0675 37.1472 49.2214 31.033 51.579Z"
+              stroke="#1A2030" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M24.8994 24.8991C24.8994 26.1965 25.4148 27.4408 26.3322 28.3581C27.2496 29.2755 28.4938 29.7909 29.7912 29.7909C31.0886 29.7909 32.3328 29.2755 33.2502 28.3581C34.1676 27.4408 34.683 26.1965 34.683 24.8991C34.683 23.6017 34.1676 22.3575 33.2502 21.4401C32.3328 20.5227 31.0886 20.0073 29.7912 20.0073C28.4938 20.0073 27.2496 20.5227 26.3322 21.4401C25.4148 22.3575 24.8994 23.6017 24.8994 24.8991Z"
+              stroke="#1A2030" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M29.79 29.7905V37.1282" stroke="#1A2030" stroke-width="4" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <h3 class="text-2xl mt-5">Cree más de una cuenta</h3>
+          <p class="text-center break-words break-normal text-base mt-5">
+            Cree más de una cuenta en caso de que lo desee.
+          </p>
+        </div>
+        <div class="text-2xl w-[367px] h-[212px] mr-[97.5px]">
+          <svg class="m-auto" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8 30.3549C8 36.2838 10.3552 41.9698 14.5476 46.1622C18.7399 50.3545 24.426 52.7097 30.3549 52.7097C36.2838 52.7097 41.9698 50.3545 46.1622 46.1622C50.3545 41.9698 52.7097 36.2838 52.7097 30.3549C52.7097 24.426 50.3545 18.7399 46.1622 14.5476C41.9698 10.3552 36.2838 8 30.3549 8C24.426 8 18.7399 10.3552 14.5476 14.5476C10.3552 18.7399 8 24.426 8 30.3549Z"
+              stroke="#1A2030" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M30.3545 8V30.3549L49.8927 41.2094" stroke="#1A2030" stroke-width="4" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+
+          <h3 class="text-2xl mt-5">Historial de transferencias</h3>
+          <p class="text-center break-words break-normal text-base mt-5">
+            Visualice los últimos movimientos realizados en sus múltiples cuentas y el historial de los mismos.
+          </p>
+        </div>
+        <div class="text-2xl w-[367px] h-[212px] ml-[97.5px]">
+          <svg class="m-auto" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 9H51.2933V39.5451H9V9Z" stroke="#1A2030" stroke-width="4" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path
+              d="M24.2725 24.272C24.2725 25.8299 24.8913 27.324 25.9929 28.4256C27.0945 29.5272 28.5886 30.1461 30.1465 30.1461C31.7044 30.1461 33.1985 29.5272 34.3001 28.4256C35.4017 27.324 36.0206 25.8299 36.0206 24.272C36.0206 22.7141 35.4017 21.2201 34.3001 20.1185C33.1985 19.0169 31.7044 18.3979 30.1465 18.3979C28.5886 18.3979 27.0945 19.0169 25.9929 20.1185C24.8913 21.2201 24.2725 22.7141 24.2725 24.272Z"
+              stroke="#1A2030" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M13.7002 51.2935H46.595" stroke="#1A2030" stroke-width="4" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <h3 class="text-2xl mt-5">Transferencias</h3>
+          <p class="text-center break-words break-normal text-base mt-5">
+            Efectúe transferencias a titulares de cuentas en <b>Gstick</b> .
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-textColor ml-0 text-white p-1 mt-32">
+    <div class="container grid grid-cols-3 mx-auto text-center ">
+      <div class=" flex flex-col text-left">
+        <h4 class="text-gold font-extrabold font-GilroyRegular text-4xl p-4">
+          Gstick
+        </h4>
+      </div>
+      <div class="text-center text-base font-GilroyRegular p-6">
+        <span>© GStick by </span><span class="text-secondary ml-2">Cumbancha Volante</span>
+      </div>
+      <div class="mt-6">
+        <i class="bx bxl-facebook-square text-4xl"></i></a>
+        <i class="bx bxl-linkedin-square text-4xl"></i></a>
+        <i class="bx bxl-twitter text-4xl"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

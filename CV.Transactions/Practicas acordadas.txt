@@ -1,0 +1,10 @@
+*PascalCase -> Nombre de clases y metodos
+*camelCase -> Variables y parametros
+*Las variables privadas empiezan con "_"
+*Nombres representativos y descriptivos para variables, parametros y metodos
+*Código en ingles
+*Borrar usings no utilizados
+*Utilizacion de tipo de dato VAR por standard de microsoft
+*Las interfaces no llevan modificadores de acceso
+
+*Para que el proyecto funcione se tiene que hacer un "add-migration init" y "update-database"

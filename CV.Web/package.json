@@ -1,0 +1,28 @@
+{
+  "name": "cv-web",
+  "version": "1.0.0",
+  "description": "group work for software project assignature",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss src/styles.css -o public/css/styles.css",
+    "watch": "watch \"npm run build\"",
+    "dev": "nodemon -L -e js,html,css app.js"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "10.4.13",
+    "express": "4.18.2",
+    "postcss-cli": "10.0.0",
+    "tailwindcss": "3.2.1",
+    "watch": "1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "reload": "^3.2.0",
+    "standard": "17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}

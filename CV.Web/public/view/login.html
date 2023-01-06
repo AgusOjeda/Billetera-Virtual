@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GStick</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../css/customStyle.css" rel="stylesheet" />
+  </head>
+  <body class="font-GilroyRegular bg-[#EFF1FA]">
+    <main class="mt-24 text-center container">
+      <section class="grid grid-cols-2">
+        <div id="login" class="mt-2 ml-64 w-2/4">
+          <h1 class="text-3xl font-extrabold text-[#1D5BFB] text-left mt-12">
+            GStick
+          </h1>
+          <div class="flex flex-col justify-start">
+            <form id="form" class="flex flex-col mt-28">
+              <div class="relative mt-8">
+                <input
+                  type="text"
+                  id="email"
+                  class="peer w-full border-0 focus:outline-none focus:ring-0 bg-inherit border-b py-1 focus:border-purple-600 focus:border-b-2 transition-colors placeholder-transparent"
+                  placeholder="Email"
+                  autocomplete="email"
+                  required
+                />
+                <label
+                  id="email-label"
+                  for="email"
+                  class="absolute left-0 -top-4 text-purple-600 cursor-text peer-focus:-top-4 peer-placeholder-shown:top-1 peer-placeholder-shown:text-gray-600 transition-all"
+                  >Email</label
+                >
+              </div>
+              <div class="flex flex-grow relative mt-8">
+                <input
+                  type="password"
+                  id="password"
+                  class="peer w-full border-0 focus:outline-none focus:ring-0 bg-inherit border-b py-1 focus:border-purple-600 focus:border-b-2 transition-colors placeholder-transparent"
+                  placeholder="Password"
+                  autocomplete="current-password"
+                  required
+                />
+                <i
+                  class="bx bx-show p-2.5 bg-inherit border-b border-[#6b7280] text-gray-600 cursor-pointer focus:border-b-2 focus:border-purple-600 transition-colors peer"
+                ></i>
+                <label
+                  id="password-label"
+                  for="password"
+                  class="absolute left-0 -top-4 text-purple-600 cursor-text peer-focus:-top-4 peer-placeholder-shown:top-1 peer-placeholder-shown:text-gray-600 transition-all"
+                  >Password</label
+                >
+              </div>
+
+              <button
+                class="p-2 text-white mt-8 rounded-3xl bg-[#1D5BFB] font-semibold text-xl"
+                id="signup"
+                type="submit"
+              >
+                Iniciar sesion
+              </button>
+            </form>
+            <div class="text-left text-xs mt-4">
+              <p class="mt-4 py-2 hover:text-secondary transition-colors">
+                <a href="#">¿Te olvidaste la contraseña?</a>
+              </p>
+              <div
+                class="border-t border-[#002D74] pt-2 place-content-center flex justify-between"
+              >
+                <span class="text-textColor mr-2 self-center align-middle">
+                  ¿No tienes una cuenta?
+                </span>
+                <a
+                  id="btnSignUp"
+                  href="../view/register.html"
+                  class="bg-white font-semibold rounded-xl text-textColor px-7 py-3 hover:bg-gray-200 cursor-pointer shadow-md transition-colors"
+                >
+                  Registrarse
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="imagen" class="ml-24">
+          <img src="../images/undraw_my_password_re_ydq7.svg" />
+        </div>
+      </section>
+    </main>
+    <footer class="fixed bottom-0 text-left p-4 mt-2 w-full bg-textColor">
+      <div class="container">
+        <span class="text-gold font-semibold text-sm"
+          >Sentite seguro con GStick.</span
+        >
+        <span class="mr-2 text-white text-sm"
+          >Nunca compartas tus datos personales, claves y números de tarjetas
+          con nadie.</span
+        >
+      </div>
+    </footer>
+    <script type="module" src="../js/container/LoginContainer.js"></script>
+  </body>
+</html>

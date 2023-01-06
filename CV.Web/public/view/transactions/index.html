@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GStick</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+</head>
+
+<body class="h-full font-GilroyRegular bg-bgPrimary">
+    <div class="grid cnt h-full">
+        <nav class="py-4 h-auto">
+            <h1 class="font-GilroyExtraBold text-5xl color-azul text-right mr-10">GStick</h1>
+        </nav>
+        <main class="grid grid-auto-rows place-content-center text-center">
+            <div class="self-start mb-5">
+                <h1 class="text-4xl text-center font-bold">Transferencia de dinero</h1>
+            </div>
+            <div class="grid grid-cols-5 row-span-4">
+                <div class="col-span-2 h-full shadow-sm bg-card-desde ml-20 p-5">
+                    <h1 class="font-bold text-xl">Origen</h1>
+                    <label for="cuenta-origen" class="mt-5">Cuenta</label>
+                    <select title="Cuenta de origen" id="cuenta-origen"
+                        class="bg-gray-50 border border-gray-300 text-center p-3 text-lg rounded-lg w-full text-gray-500 ">
+                        <option selected value="70db443c-a96e-4dbd-3120-08dacbf8cd48">70db443c-a96e-4dbd-3120-08dacbf8cd48 (USD)</option>
+                        <option value="1234566787">ARS 1234566787</option>
+                        <option value="1234566787">CAD 1234566787</option>
+                    </select>
+                    <label for="disponible-cuenta" class="mt-5">Dinero disponible en cuenta</label>
+                    <input type="text" name="disponible-cuenta" id="disponible-cuenta"
+                        class="bg-gray-50 border border-gray-300 text-center p-3 text-lg rounded-lg w-full text-gray-500"
+                        placeholder="1000,00" disabled>
+                    <label for="origen-monto" class="mt-5">Total a transferir</label>
+                    <input type="text" name="origen-monto" id="origen-monto"
+                        class="bg-gray-50 border border-gray-300 text-center p-3 text-lg rounded-lg w-full text-gray-500"
+                        placeholder="1000,00">
+                </div>
+                <div class="text-center grid place-items-center">
+                    <svg class="w-14 h-14" fill="none" stroke="lightgray" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"
+                            d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <div class="col-span-2 h-full shadow-sm bg-card-hacia mr-20 p-5">
+                    <h1 class="font-bold text-xl">Destino</h1>
+                    <div class="mt-5">
+                        <div class="grid grid-cols-[auto_1fr_auto] items-center">
+                            <div></div>
+                            <div class="mt-5">
+                                <input checked id="destino-is-cbu" type="radio" value="" name="default-radio"
+                                    class="w-4 h-4 bg-gray-100 border-gray-300">
+                                <label for="cbu" class="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300">
+                                    CBU/CVU
+                                </label>
+                                <input id="destino-is-alias" type="radio" value="" name="default-radio"
+                                    class="ml-5 w-4 h-4 bg-gray-100 border-gray-300  dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="alias" class="ml-2 text-lg font-medium text-gray-900 dark:text-gray-300">
+                                    Alias
+                                </label>
+                            </div>
+                            <div></div>
+                        </div>
+                        <label for="cbu-alias-destino" class="mt-5">Identificacion de cuenta</label>
+                        <input type="text" name="cbu-alias-destino" id="cbu-alias-destino"
+                            class="bg-gray-50 border border-gray-300 text-center p-3 text-lg rounded-lg w-full text-gray-500"
+                            placeholder="###.###.###">
+                        <label for="motivo" class="mt-5">Motivo</label>
+                        <input type="text" name="motivo" id="motivo"
+                            class="bg-gray-50 border border-gray-300 text-center p-3 text-lg rounded-lg w-full text-gray-500"
+                            placeholder="Agregue un motivo...">
+                    </div>
+                </div>
+            </div>
+            <div class="pt-5 w-full">
+                <button id="step1-continuar-transf" type="button"
+                    class="text-white w-1/4 bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-base rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 ">
+                    Continuar
+                </button>
+            </div>
+        </main>
+        <footer class="h-12 self-end">
+        </footer>
+    </div>
+</body>
+
+<script type="module" src="../../js/services/Transactions/TransactionHandlersStep1.js"></script>
+
+<style>
+    .cnt {
+        grid-template-rows: minmax(10%, auto) 1fr minmax(20px, 60px);
+    }
+
+    main {
+        background-color: #EFF1FA;
+    }
+
+    footer {
+        background-color: #1A2030;
+    }
+
+    .bg-card-desde {
+        background-color: #f1ebd9;
+        border-radius: 10px;
+    }
+
+    .bg-card-hacia {
+        background-color: #bababa11;
+        border-radius: 10px;
+    }
+
+    .color-azul {
+        color: #1D5BFB;
+    }
+</style>
+
+</html>
