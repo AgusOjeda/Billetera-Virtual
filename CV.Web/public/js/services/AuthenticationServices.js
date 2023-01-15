@@ -23,6 +23,7 @@ export const Login = async (userAuth, callback) => {
       }
     })
     .then((body) => {
+      console.log(body.data)
       callback(body.data)
     })
     .finally((body) => {
