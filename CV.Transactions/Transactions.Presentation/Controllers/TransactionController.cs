@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
 using Microsoft.VisualBasic;
+using Newtonsoft.Json.Linq;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net.Http.Headers;
 using System.Text.Json;
@@ -55,8 +56,8 @@ namespace Transactions.Presentation.Controllers
 
                 var userToken = HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
 
-                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", userToken);
-                
+                _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {userToken}");
+
                 var FromAccountId = model.FromAccountId;
 
                 var ToAccountId = model.ToAccountId;
@@ -297,6 +298,7 @@ namespace Transactions.Presentation.Controllers
 
         private async Task<string> BalanceIssuer(string urlAccountPut, UpdateBalanceModel updateBalanceEmisor)
         {
+
             var resultUpdateEmisor = await _httpClient.PutAsJsonAsync(urlAccountPut, updateBalanceEmisor);
 
             if (!resultUpdateEmisor.IsSuccessStatusCode)
