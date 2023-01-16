@@ -10,7 +10,7 @@ using System.Text;
 
 namespace CV.Onboarding.Presentation.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     
