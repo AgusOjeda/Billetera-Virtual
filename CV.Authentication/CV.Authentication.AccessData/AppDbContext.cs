@@ -8,11 +8,7 @@ namespace CV.Authentication.AccessData
         public DbSet<User> User { get; set; }
         public DbSet<UserAccountState> UserAccountState { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=gstick-auth-db;Encrypt=False;Trusted_Connection=True;");
-            base.OnConfiguring(optionsBuilder);
-        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>(entity => 
