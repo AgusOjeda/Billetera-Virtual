@@ -20,13 +20,13 @@ namespace CV.MsAccount.Application.Services
         {
             var client = new HttpClient
             {
-                BaseAddress = new Uri(_configuration["ApiSettings:baseUrl"])
             };
 
-            var url = $"api/Customer";
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(jwtToken);
+            var url = $"https://localhost:7103/api/Customer";
+            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {jwtToken}");
 
-            var response = await client.GetAsync(url);
+            var response = await client.GetAsync("https://localhost:7103/api/Customer");
+            Console.WriteLine(response);
 
             if (response.IsSuccessStatusCode)
             {
