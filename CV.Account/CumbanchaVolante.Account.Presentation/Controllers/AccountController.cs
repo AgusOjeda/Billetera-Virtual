@@ -31,8 +31,7 @@ namespace CV.MsAccount.Presentation.Controllers
         [ProducesResponseType(typeof(ServerResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetById(Guid id)
         {
-            var jwtStringTokenComplete = Request.Headers["Authorization"].ToString();
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(jwtStringTokenComplete);
+            var jwtStringTokenComplete = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
             
             var opt = new JsonSerializerOptions() { WriteIndented = true };
             string strJson;
@@ -95,9 +94,6 @@ namespace CV.MsAccount.Presentation.Controllers
         [ProducesResponseType(typeof(ServerResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetByCustomerId()
         {
-            var userToken = HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", userToken);
-
             var jwt = new JwtSecurityTokenHandler().ReadJwtToken(Request.Headers["Authorization"].ToString().Replace("Bearer ", ""));
             string id = jwt.Claims.First(c => c.Type == "nameid").Value;
 
@@ -367,17 +363,6 @@ namespace CV.MsAccount.Presentation.Controllers
             string strJson;
             try
             {
-                var account = await _service.GetById(userId, jwtStringTokenComplete);
-                if (account is null)
-                {
-                    var errorResponse = new ServerResponse
-                    {
-                        Message = "Account not found!",
-                    };
-                    strJson = JsonSerializer.Serialize(errorResponse, opt);
-                    return StatusCode(StatusCodes.Status404NotFound, strJson);
-                }
-
                 var result = await _service.UpdateAccountBalance(updateBalanceRequest.AccountId, updateBalanceRequest.Amount);
                 if (result is null)
                 {
