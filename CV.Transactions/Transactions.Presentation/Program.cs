@@ -30,18 +30,18 @@ builder.Services.AddAuthentication(d =>
     d.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     d.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(d =>
+{
+    d.RequireHttpsMetadata = false;
+    d.SaveToken = true;
+    d.TokenValidationParameters = new TokenValidationParameters
     {
-        d.RequireHttpsMetadata = false;
-        d.SaveToken = true;
-        d.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuerSigningKey = false,
-            IssuerSigningKey = new SymmetricSecurityKey(key),
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            ValidateLifetime = true
-        };
-    }
+        ValidateIssuerSigningKey = false,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true
+    };
+}
 );
 
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(connectionString));
