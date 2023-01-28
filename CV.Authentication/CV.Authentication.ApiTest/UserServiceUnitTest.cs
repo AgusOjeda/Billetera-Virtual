@@ -28,4 +28,21 @@ public class UserServiceUnitTest
         //Assert
         Assert.True(result);
     }
+    [Fact]
+    public async void FindByEmail_ShouldReturnFalse_WhenEmailNoExists()
+    {
+        //Arrange
+        var email = "test@email.com";
+        var jwtConfig = new JwtConfig();
+        var mockRepository = new Mock<IUserRepository>();
+        mockRepository.Setup(repo => repo.FindByEmailAsync(email)).ReturnsAsync(false);
+        var options = Options.Create(jwtConfig);
+        var service = new UserService(mockRepository.Object,options);
+
+        //Act
+        var result = await service.FindByEmail(email);
+
+        //Assert
+        Assert.False(result);
+    }
 }
