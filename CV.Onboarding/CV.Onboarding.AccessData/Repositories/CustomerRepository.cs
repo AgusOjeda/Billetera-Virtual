@@ -43,7 +43,7 @@ namespace CV.Onboarding_AccessData.Repositories
             _context.SaveChanges();
         }               
 
-        public async Task<Customer> GetCustomerById(Guid id)
+        public async Task<Customer?> GetCustomerById(Guid id)
         {
             return await _context.Customers.Where(x => x.Id == id)
                             .Include(x => x.Address)
@@ -52,7 +52,7 @@ namespace CV.Onboarding_AccessData.Repositories
                             .FirstOrDefaultAsync();
         }
 
-        public async Task<Customer> GetCustomerByDni(string dni)
+        public async Task<Customer?> GetCustomerByDni(string dni)
         {
             return await _context.Customers.Where(x => x.Dni == dni)
                             .Include(x => x.Address)
@@ -67,7 +67,7 @@ namespace CV.Onboarding_AccessData.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Customer> VerificationState(Guid id)
+        public async Task<Customer?> VerificationState(Guid id)
         {
             return await _context.Customers.Where(x => x.Id == id)
                             .Where(x => x.IdentityVerification.State == 1)

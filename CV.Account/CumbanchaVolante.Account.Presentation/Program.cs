@@ -49,7 +49,7 @@ builder.Services.AddCors(options =>
         name: "corspolicy",
         build =>
         {
-            build.WithOrigins("http://127.0.0.1:5500").AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            build.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
         }
         );
 });

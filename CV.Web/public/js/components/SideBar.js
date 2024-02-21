@@ -1,6 +1,6 @@
 export const sideBar = () => {
     return `
-        <sidebar class="bg-bgSidebar text-left col-span-2">
+        <sidebar class="bg-bgSidebar text-left">
             <p class="text-brand font-GilroyExtraBold text-4xl mb-20 mt-14 ml-3 p-1">GStick</p>
             <section class="text-bgPrimary hover:text-gray-400 p-1 m-3 mt-3 rounded-lg" id="side-home">Home</section>
             <section class="text-bgPrimary hover:text-gray-400 p-1 m-3  mt-3 rounded-lg" id="side-transf">Transferencias</section>

@@ -170,14 +170,14 @@ namespace CV.MsAccount.Presentation.Controllers
         [ProducesResponseType(typeof(ServerResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetByCbu([FromQuery] string cbu)
         {
-            var userToken = HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", userToken);
-
-
-            var opt = new JsonSerializerOptions() { WriteIndented = true };
-            string strJson;
+                var opt = new JsonSerializerOptions() { WriteIndented = true };
             try
             {
+                var userToken = HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+                _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {userToken}");
+
+
+                string strJson;
                 if (!ModelState.IsValid)
                 {
                     var errorResponse = new ServerResponse

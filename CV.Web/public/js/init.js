@@ -8,7 +8,7 @@ window.onload = async () => {
     let token = GetJwtToken()
 
     if(token == null){
-        window.location.href = "landing.html"
+        window.location.href = "/"
     }
 
     let section = getParamFromURL("section")

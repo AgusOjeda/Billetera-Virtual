@@ -3,7 +3,7 @@ export const trxStep3 = `
             <div class="mb-3">
                 <p class="text-lg mt-3"><span class="font-bold">Paso 3</span>: descargue su comprobante.</p>
             </div>
-            <div class="grid shadow-sm mb-5 ml-20 mr-20 grid-cols-8 bg-zinc-300/30 h-full p-10">
+            <div class="grid shadow-sm mb-5 ml-20 mr-20 grid-cols-8 bg-zinc-300/30 h-full p-10" id="comprobante">
                 <div class="p-3 text-center col-start-3 col-end-5 row-start-1 row-end-1">
                     <p class="font-bold text-2xl mb-3">Fecha</p>
                     <div class="text-gray-600 font-bold" id="date">12/12/2022</div>
