@@ -48,6 +48,7 @@ builder.Services.AddAuthentication(d =>
 
 // Db connection for Authentication
 var connectionString = builder.Configuration["ConnectionString"];
+Console.WriteLine(connectionString);
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
 // Dependency Injection
@@ -62,7 +63,7 @@ builder.Services.AddCors(options =>
         name: "corspolicy",
         build =>
         {
-            build.WithOrigins("http://127.0.0.1:5500").AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            build.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
         }
         );
 });
@@ -70,11 +71,11 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 app.UseCors("corspolicy");
 

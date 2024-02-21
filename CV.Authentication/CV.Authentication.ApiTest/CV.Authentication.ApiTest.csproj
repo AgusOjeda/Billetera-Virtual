@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
         <PackageReference Include="Moq" Version="4.18.4" />
         <PackageReference Include="xunit" Version="2.4.2" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
@@ -25,6 +25,7 @@
     <ItemGroup>
       <ProjectReference Include="..\CV.Authentication.AccessData\CV.Authentication.AccessData.csproj" />
       <ProjectReference Include="..\CV.Authentication.Application\CV.Authentication.Application.csproj" />
+      <ProjectReference Include="..\CV.Authentication.Presentation\CV.Authentication.Presentation.csproj" />
     </ItemGroup>
 
 </Project>
